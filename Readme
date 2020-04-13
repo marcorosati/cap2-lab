@@ -1,0 +1,27 @@
+SETUP
+-git clone https://github.com/marcorosati/hello-swarm.git
+-git reset --hard a723484d8c22c0007d17ad92ed6d5a80fb771e08
+-git push -f 
+
+TASK
+-deploy di hello-swarm
+ project name-> design-container
+ app name -> hello
+-change Dockerfile for random user
+-test curl SERVICE_IP:PORT/ (e non /hello/api come nel testo del lab (usiamo un hello-world diverso https://dzone.com/articles/hello-world-with-wildfly-swarm)
+-config map appconfig APP_MSG="Elvis lives"
+
+
+
+NOTE
+Install gradle
+	https://www.vultr.com/docs/how-to-install-gradle-on-centos-7
+
+swarm helloworld => create jar
+	https://dzone.com/articles/hello-world-with-wildfly-swarm
+        problema ip4/ipv6 https://www.sipmann.com/socketException-protocol-family-unavailable-java-docker-wildfly.html#.XaeKgpwpDak
+NB: per verificare il configmap, non usare api ma accedere al container e verificare la variabile d'ambiente
+
+
+
+
